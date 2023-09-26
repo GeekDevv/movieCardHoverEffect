@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Card Hover Effect</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(20,20,20);
+            color: white;
+        }
+        .container{
+            padding: 100px 0px;
+        }
+        .title{
+            text-align: center;
+            color: aqua;
+        }
+        .card-container{
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        .card{
+            position: relative;
+            width: 500px;
+            height: 270px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-right: 5px solid aqua;
+            background-position: center;
+            background-size: 120%;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        .card-1{
+            background-image: url(/cover-1.png);
+        }
+        .card-2{
+            background-image: url(/cover-2.jpg);
+        }
+        .card-3{
+            background-image: url(/cover-3.jpg);
+        }
+        .card:hover{
+            background-size: 100%;
+        }
+        .card:hover .description{
+            display: block;
+            animation: animation 0.3s linear;
+        }
+        @keyframes animation {
+            0%{
+                transform: translateY(100px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+        .text-box{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 15px 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(3px);
+        }
+        .info{
+            margin: 5px 0px;
+        }
+        .description{
+            font-size: 16px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <article class="container">
+        <h2 class="title">MOVIE LISTS</h2>
+        <div class="card-container">
+            <div class="card card-1">
+                <div class="text-box">
+                    <h3 class="caption">Avengers: Endgame</h3>
+                    <h5 class="info">2019 ‧ Action/Sci-fi ‧ 3h 2m</h5>
+                    <span class="description">
+                        After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.
+                    </span>
+                </div>
+            </div>
+            <div class="card card-2">
+                <div class="text-box">
+                    <h3 class="caption">Doctor Strange in the Multiverse of Madness</h3>
+                    <h5 class="info">2022 ‧ Action/Adventure ‧ 2h 6m</h5>
+                    <span class="description">
+                        Doctor Strange teams up with a mysterious teenage girl from his dreams who can travel across multiverses, to battle multiple threats, including other-universe versions of himself, which threaten to wipe out millions across the multiverse. They seek help from Wanda the Scarlet Witch, Wong and others.
+                    </span>
+                </div>
+            </div>
+            <div class="card card-3">
+                <div class="text-box">
+                    <h3 class="caption">Spider-Man: Far From Home</h3>
+                    <h5 class="info">2019 ‧ Action/Sci-fi ‧ 2h 10m</h5>
+                    <span class="description">
+                        Following the events of Avengers: Endgame (2019), Spider-Man must step up to take on new threats in a world that has changed forever.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </article>
+
+</body>
+</html>
+
+
